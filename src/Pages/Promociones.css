@@ -1,0 +1,60 @@
+.my-atropos {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    max-height: 350px;
+    filter: contrast(120%);
+    box-shadow: 0px 0px 10px -80px #FFC764;
+    transition: box-shadow .6s ease-out;
+    transition-delay: 3;
+
+    animation: shadow-appear ease-in-out 1s;
+}
+
+@keyframes shadow-appear {
+    from {
+        box-shadow: 0px 0px 10px -80px #FFC764;
+    }
+
+    to {
+        box-shadow: 0px 0px 69px -20px #FFC764;
+    }
+}
+
+.my-atropos:not(:hover) {
+    filter: contrast(120%);
+    box-shadow: 0px 0px 69px -20px #FFC764;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    max-height: 350px;
+    background: url(/public/Imagenes/marco.png);
+    background-size: cover;
+    background-position-x: center;
+    border-radius: 10px;
+    color: #FFC764;
+}
+
+
+
+.Prom{
+    background-color: #000025;
+}
+
+ /* .my-atropos {
+    width: 420px;
+    height: 350px;
+    filter: contrast(120%);
+  }
+.card {
+    width: 420px;
+    height: 350px;
+    background: url(/public/Imagenes/marco.png);
+    border-radius: 10px;
+    color: #FFC764;
+}
+.Prom{
+    background-color: wheat;
+} */
