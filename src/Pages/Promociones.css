@@ -40,7 +40,9 @@
 
 
 .Prom{
-    background-color: #000025;
+    background: rgba(255, 255, 255, 0.78);
+    background: -webkit-linear-gradient(104deg, rgba(255, 255, 255, 0.78) 0%, rgba(77, 199, 240, 0.63) 100%);
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.78) 0%, rgba(77, 199, 240, 0.63) 100%);
 }
 
  /* .my-atropos {

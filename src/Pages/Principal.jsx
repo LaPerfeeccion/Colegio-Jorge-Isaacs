@@ -16,7 +16,7 @@ const Principal = () => {
 
       <Stack className="content">
         <Stack className='colegio'>
-          <Typography variant='h3' > Colegio Jorge Isaacs </Typography>
+          <Typography variant='h3'className='col' sx={{fontFamily:"Dancing Script"}} > Colegio Jorge Isaacs </Typography>
         </Stack>
 
         <Grid className="first-content" sx={{ display: "flex",flexDirection:"column" , gap:"20px"}}>
