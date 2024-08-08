@@ -15,6 +15,12 @@
 }
 
 .glass{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 980px;
+    height: 200px;
     background-color: transparent;
     backdrop-filter: blur(20px);
     background-image: linear-gradient(
@@ -22,11 +28,11 @@
     );
     border-radius: 10px;
 }
-.glass2{
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-        120deg,rgb(0, 0, 0, 0.2),rgb(255, 255, 255, 0.3) 
-    );
-    border-radius: 10px;
+.colegio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url(https://cdn.discordapp.com/attachments/875056103157796865/1269765434962612284/Imagendelcolegio.png?ex=66b140b6&is=66afef36&hm=ea79d7e7654914b727522db89de21bbcb508fe931858234b03522a426813867a&);
+    background-size: 100%;
 }

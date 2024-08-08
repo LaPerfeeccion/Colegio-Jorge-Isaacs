@@ -5,7 +5,7 @@ export default function Foto1() {
     <Image
       isBlurred
       width={240}
-      src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
+      src="./public/imagenes/Icondirect.png"
       alt="NextUI Album Cover"
       className="m-5"
     />
