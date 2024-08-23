@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.portada{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: cover;
+    width: 1400px;
+}
+.image_rotate {
+    animation: rotation 2s infinite linear;
+}
+
+.rotate {
+    animation: rotation 4s;
+}
+.linear {
+    animation-timing-function: linear;
+}
+.infinite {
+    animation-iteration-count: infinite;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
