@@ -1,0 +1,7 @@
+.prin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 1, 44);
+    padding: 20px;
+}

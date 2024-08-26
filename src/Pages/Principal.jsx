@@ -5,6 +5,12 @@ import './Principal.css';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import Foto1 from '../Components/Imagen1';
+import Footer from '../Components/Footer';
+import Cover from '../Components/cover';
+import Primer from '../Components/primer';
+import Segundo from '../Components/segundo';
+import Ter from '../Components/Ter';
+import For from '../Components/For';
 
 const Principal = () => {
   useEffect(() => {
@@ -21,50 +27,56 @@ const Principal = () => {
             <source src="/public/Videos/video.mp4" type="video/mp4" />
           </video>
 
-          <Typography variant="h2" className="col" sx={{ fontFamily: 'Dancing Script', marginRight:"100px" }}>
+          <Typography variant="h2" className="col" sx={{ fontFamily: 'Dancing Script', marginRight: '100px' }}>
             Colegio Jorge Isaacs
           </Typography>
         </Stack>
 
-        <Grid className="first-content" sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          
-          <img className='h' src="/public/imagenes/imagendelcolegio.png" alt="" />
-          <Grid className="glass">
-            <Foto1></Foto1>
-            <Typography variant="h8" sx={{ textAlign: 'center' }}>
+        <Grid
+          className="first-content"
+          sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap:"50px" }}
+        >
+          <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+            <Ter></Ter>
+            <Grid className='texto' >
+            <Typography className='tex' variant="h6" sx={{ textAlign: 'center', fontFamily: 'Dancing Script'}}>
               {' '}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus quaerat quam dolor aliquid
-              fugiat, porro animi, iure deleniti repudiandae aperiam, corrupti recusandae. Doloremque laborum animi
-              iusto adipisci aliquam asperiores?{' '}
-            </Typography>
+              Deseo que el Colegio Jorge Isaacs saque estudiantes expecionales y capaces de enfrentar los desafios de
+              este mundo{' '}
+            </Typography>  
+            </Grid>
           </Grid>
-          <Grid className="glass">
-            <Foto1></Foto1>
-            <Typography variant="h8" sx={{ textAlign: 'center' }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus quaerat quam dolor aliquid
-              fugiat, porro animi, iure deleniti repudiandae aperiam, corrupti recusandae. Doloremque laborum animi
-              iusto adipisci aliquam asperiores?
-            </Typography>
+          <Grid
+            sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row-reverse' }}
+            >
+            <Primer></Primer>
+            <Grid className='texto' >
+            <Typography className='tex' variant="h6" sx={{ textAlign: 'center', fontFamily: 'Dancing Script'}}>
+              {' '}
+              Deseo que el Colegio Jorge Isaacs saque estudiantes expecionales y capaces de enfrentar los desafios de
+              este mundo{' '}
+            </Typography>  
+            </Grid>
           </Grid>
-
-          <Grid className="glass">
-            <Foto1></Foto1>
-            <Typography variant="h8" sx={{ textAlign: 'center' }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus quaerat quam dolor aliquid
-              fugiat, porro animi, iure deleniti repudiandae aperiam, corrupti recusandae. Doloremque laborum animi
-              iusto adipisci aliquam asperiores?
-            </Typography>
+          <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+            <For></For>
+            <Grid className='texto' >
+            <Typography className='tex' variant="h6" sx={{ textAlign: 'center', fontFamily: 'Dancing Script'}}>
+              {' '}
+              Deseo que el Colegio Jorge Isaacs saque estudiantes expecionales y capaces de enfrentar los desafios de
+              este mundo{' '}
+            </Typography>  
+            </Grid>
+            
           </Grid>
         </Grid>
-        <Typography>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat corporis rem sit vitae asperiores quis.
-          Distinctio atque unde quod ab accusamus sapiente rerum totam ex nemo. Praesentium quae quaerat impedit.
-        </Typography>
-
+            {/* <Segundo></Segundo> */}
+        <Cover />
         <Stack>
-          <Modal1 />
+          {/* <Modal1 /> */}
         </Stack>
       </Stack>
+      <Footer></Footer>
     </Stack>
   );
 };

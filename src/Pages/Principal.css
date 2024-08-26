@@ -7,7 +7,7 @@
 
 
 
-.glass{
+/* .glass{
     align-content: center;
     display: flex;
     flex-direction: row;
@@ -21,8 +21,8 @@
         120deg,rgb(255, 255, 255, 0.3) ,rgb(0, 0, 0, 0.2)
         );
         border-radius: 10px;
-    }
-    .colegio{
+    } */
+.colegio{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,10 +56,20 @@
     height: 120%;
     background-color: rgb(0, 0, 0,.4);
 }
-.h{
-    padding: 20px;
-}
 
-.content{
-    gap: 100px;
+.first-content{
+    background-color: black;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+}
+.h{
+    padding: 10px;
+}
+.tex{
+    opacity: initial;
+}
+.texto{
+    width: 320px;
+    margin: 10px;
+    padding: 5px;
 }

@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 import Appbar from '../Components/Appbar';
 import './Historia.css';
 import { Stack, Typography } from '@mui/material';
+import Footer from '../Components/Footer';
+import Spot from '../Components/spot';
 
 const Historia = () => {
   const [isPlaying, setIsPlaying] = useState(true); // Estado para controlar la reproducción
@@ -27,7 +29,7 @@ const Historia = () => {
         <Typography sx={{textAlign:"center", fontFamily: 'Dancing Script'}} variant='h3'>
           Himno del Colegio Jorge Isaacs
         </Typography>
-        <Stack flexDirection={'row'} sx={{ justifyContent: 'space-around' }}>
+        <Stack className='him' flexDirection={'row'} sx={{ justifyContent: 'space-around' }}>
           <img className="rotate linear infinite" src="/public/imagenes/fondo.png" width="300px" alt="" />
           <button
             id="lo"
@@ -40,8 +42,10 @@ const Historia = () => {
             <Typography sx={{fontFamily: 'Dancing Script'}} variant='h5'>{isPlaying ? 'Pause Music' : 'Play Music'}</Typography>
           </button>
           <audio ref={audioRef} src="/public/Audios/Himno.mp3" loop autoPlay />
+        <Spot></Spot>
         </Stack>
       </Stack>
+      <Footer></Footer>
     </Stack>
   );
 };
