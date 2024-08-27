@@ -1,55 +1,47 @@
-.my-atropos {
+body{
+    background-color: black;
+    margin: 0;
+}
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 420px;
-    max-height: 350px;
-    filter: contrast(120%);
-    box-shadow: 0px 0px 10px -80px #FFC764;
-    transition: box-shadow .6s ease-out;
-    transition-delay: 3;
-
-    animation: shadow-appear ease-in-out 1s;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
 }
-
-@keyframes shadow-appear {
-    from {
-        box-shadow: 0px 0px 10px -80px #FFC764;
-    }
-
-    to {
-        box-shadow: 0px 0px 69px -20px #FFC764;
-    }
+.carousel .list .item .name{
+    font-weight: bold;
+    letter-spacing: 10px;
 }
-
-.my-atropos:not(:hover) {
-    filter: contrast(120%);
-    box-shadow: 0px 0px 69px -20px #FFC764;
+.carousel .list .item .title,
+.carousel .list .item .integrants{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
 }
-
-.card {
-    width: 100%;
-    max-width: 420px;
-    max-height: 350px;
-    background: url(/public/Imagenes/marco.png);
-    background-size: cover;
-    background-position-x: center;
-    border-radius: 10px;
-    color: #FFC764;
+.carousel .list .item .integrants{
+    color: #568bff;
 }
-
-
- /* .my-atropos {
-    width: 420px;
-    height: 350px;
-    filter: contrast(120%);
-  }
-.card {
-    width: 420px;
-    height: 350px;
-    background: url(/public/Imagenes/marco.png);
-    border-radius: 10px;
-    color: #FFC764;
-}
-.Prom{
-    background-color: wheat;
-} */
