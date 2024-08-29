@@ -2,6 +2,7 @@ import Appbar from '../Components/Appbar';
 import "./Promociones.css"
 
 const Promociones = () => {
+  
   return (
     <div>
       <body>
@@ -44,17 +45,64 @@ const Promociones = () => {
               <div className="name"> GEMDEX </div>
               <div className="title"> Prom 2021 </div>
               <div className="integrants"> 18 estudiantes </div>
-              <div className="buttons">
-                <button> More </button>
-                <button> less </button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="thumbnail">
+          <div className="item">
+            <img src="public/imagenes/etuals.png" alt="" />
+            <div className="content">
+              <div className="title">
+                PROMOCIONES
+              </div>
+              <div className="des">
+                Description
+              </div>
+            </div>
+          </div>
+          <div className="item">
+            <img src="./public/imagenes/Aurum.png" alt="" />
+            <div className="content">
+              <div className="title">
+                PROMOCIONES
+              </div>
+              <div className="des">
+                Description
+              </div>
+            </div>
+          </div>
+          <div className="item">
+          <img src="./public/imagenes/Prom2022.jpeg" alt="" />
+            <div className="content">
+              <div className="title">
+                PROMOCIONES
+              </div>
+              <div className="des">
+                Description
+              </div>
+            </div>
+          </div>
+          <div className="item">
+          <img src="./public/imagenes/Prom2021.jpeg" alt="" />
+            <div className="content">
+              <div className="title">
+                PROMOCIONES
+              </div>
+              <div className="des">
+                Description
               </div>
             </div>
           </div>
         </div>
+        <div className="arrows">
+          <button id='prev'> {'<'}  </button>
+          <button id='next' > {'>'} </button>
+        </div>
+        <div className="time"></div>
       </div>
       </body>
-      
-      <script src="../Components/Prom.js"></script>
+      <script src="../"></script>
     </div>
   );
 };
