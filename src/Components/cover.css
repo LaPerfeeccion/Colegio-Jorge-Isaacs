@@ -1,7 +1,40 @@
-.prin{
+.prin {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(1, 1, 44);
+    background: #000000;
+    background: -webkit-linear-gradient(0deg, #000000 0%, #01012c 100%);
+    background: linear-gradient(0deg, #000000 0%, #01012c 100%);
     padding: 20px;
+}
+
+/* Overlay oscuro para las tarjetas */
+.card-overlay {
+    position: relative;
+    cursor: pointer; /* Esto es para dar indicación visual de que es clickeable */
+}
+
+.card-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;/* Hacer el overlay menos oscuro al hacer hover */
+    z-index: 2; /* Mantener por debajo del contenido de la tarjeta */
+    transition: background 0.3s ease;
+    pointer-events: none; /* Esto es lo más importante: evitar que el overlay bloquee los clics */
+    color: #000000;
+}
+
+.card-overlay:hover::before {
+     background: rgba(0, 0, 0, 0.7); /* Overlay oscuro */
+}
+
+/* Ajustar el contenido de texto sobre el overlay */
+.card-content {
+    position: absolute;
+    z-index: 3; /* El texto está por encima del overlay */
+    color: white;
 }

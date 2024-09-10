@@ -1,0 +1,22 @@
+/* FloatingButton.css */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    color: rgb(252, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10px; /* Asegúrate de que esté por encima de otros elementos */
+    transition: opacity 2s ease;
+    
+  }
+
+  

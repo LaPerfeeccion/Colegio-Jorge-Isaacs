@@ -33,4 +33,16 @@
 }
 .him{
     padding: 30px;
+    background-color: aliceblue;
+}
+
+.videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #326294;
+}
+iframe{
+    border-radius: 45px;
 }
