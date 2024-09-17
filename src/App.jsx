@@ -5,6 +5,8 @@ import Promociones from "./Pages/Promociones";
 import Historia from "./Pages/Historia";
 import "./App.css"
 import gallery from "./Pages/gallery";
+import Deportistaect from "./Pages/Deportistasect";
+import Bio from "./Pages/Bio";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/Promociones" Component={Promociones} />
         <Route path="/Historia" Component={Historia} />
         <Route path="/gallery" Component={gallery} />
+        <Route path="/Deportistaect" Component={Deportistaect} />
+        <Route path="/Bio/:id" element={<Bio />} />
       </Routes>
     </BrowserRouter>
 

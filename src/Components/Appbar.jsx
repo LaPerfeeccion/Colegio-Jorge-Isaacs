@@ -29,7 +29,7 @@ export default function Appbar() {
   return (
     <Navbar isBordered variant="sticky">
       <NavbarBrand >
-        <img src="./public/imagenes/icon.png" className="icon" width={"80px"}  alt="" />
+        <img src="./public/imagenes/fondo.png" className="icon" width={"60px"}  alt="" />
         <p className="font-bold text-2xl" >Colegio Jorge Isaacs</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">

@@ -1,0 +1,13 @@
+.fade-in-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+    color: black;
+  }
+  
+  .fade-in-text.show {
+    opacity: 1;
+    transform: translateX(0);
+    color: black;
+  }
+  

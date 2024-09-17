@@ -55,11 +55,11 @@ export default function Spot() {
         shadow="sm"
       >
         <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center w-[510px] h-[200px] justify-center">
             <div className="relative col-span-6 md:col-span-4">
               <Image
                 alt="Album cover"
-                className="object-cover"
+                className="object-cover rotate linear infinite"
                 height={200}
                 shadow="md"
                 src="/public/imagenes/fondo.png"
@@ -71,8 +71,8 @@ export default function Spot() {
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-0">
                   <h3 className="font-semibold text-foreground/90">Himno</h3>
-                  <p className="text-small text-foreground/80">12 Tracks</p>
-                  <h1 className="text-large font-medium mt-2">Frontend Radio</h1>
+                  <p className="text-small text-foreground/80">Colegio Jorge Isaacs</p>
+                  <h1 className="text-large font-medium mt-2">El nos señala el camino</h1>
                 </div>
               </div>
 
@@ -104,9 +104,9 @@ export default function Spot() {
                   onClick={togglePlayPause}
                 >
                   {isPlaying ? (
-                    <PauseCircleIcon size={54} />
+                    <PauseCircleIcon size={45} />
                   ) : (
-                    <PlayCircleIcon size={54} />
+                    <PlayCircleIcon size={10} />
                   )}
                 </Button>
               </div>

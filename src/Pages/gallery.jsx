@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './gallery.css';
 import Appbar from '../Components/Appbar';
+import { Backdrop } from '@mui/material';
 
 const Gallery = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  useEffect(() => {
+    const showBackdrop = async () => {
+      handleOpen();
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 6000)); // Espera de 6 segundos
+      } finally {
+        handleClose(); // Cierra el Backdrop
+      }
+    };
+    
+    showBackdrop();
+  }, []);
+
   const media = [
     { type: "image", src: "./public/imagenes/1.jpeg" },
     { type: "image", src: "./public/imagenes/2.jpeg" },
@@ -26,6 +49,19 @@ const Gallery = () => {
   return (
     <div className="pint">
       <Appbar />
+      <Backdrop
+        sx={{
+          color: '#fff',
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundImage: './public/Imagenes/Imagendelcolegio.png'
+        }}
+        open={open}
+      >
+        <div className="todo">
+          <img className="in" src="./public/Imagenes/it.png" width={'100%'} alt="" />
+          <div className="progress"></div>
+        </div>
+      </Backdrop>
       <div className="gallery">
         {media.map((item, index) => (
           item.type === "image" ? (

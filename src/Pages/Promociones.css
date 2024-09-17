@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #0a002c;
 }
 .carousel{
     height: 89.4vh;
@@ -12,6 +13,9 @@ body{
     height: 100%;
     position: absolute;
     inset: 0 0 0 0;
+}
+.lo{
+    margin-left: 100px;
 }
 .carousel .list .item img{
     width: 100%;
@@ -37,9 +41,10 @@ body{
 }
 .carousel .list .item .title,
 .carousel .list .item .integrants{
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
     line-height: 1.3em;
+    margin-right: 300px;
 }
 .carousel .list .item .integrants{
     color: #fffd92;
@@ -84,8 +89,8 @@ body{
 
 .arrows{
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 55%;
+    right: 62%;
     width: 300px;
     max-width: 30%;
     display: flex;

@@ -5,6 +5,7 @@
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
   }
   
   .fixedTop {
@@ -20,4 +21,3 @@
     top: 0;
     z-index: 1000;
   }
-  

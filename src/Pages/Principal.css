@@ -169,3 +169,75 @@ background: linear-gradient(0deg, #01012c 0%, #000000 100%);
     color: #000;
     font-weight: bold;
   }
+
+
+
+  .progress {
+    width: 158.4px;
+    height: 26.4px;
+    background: linear-gradient(#000264 50%,#0000 0),
+         linear-gradient(#0000 50%,#000264 0),
+         linear-gradient(#000264 50%,#0000 0),
+         linear-gradient(#0000 50%,#000264 0),
+         linear-gradient(#000264 50%,#0000 0),
+         linear-gradient(#0000 50%,#000264 0)
+         #c0c0c0;
+    background-size: calc(100%/6 + 1px) 200%;
+    background-repeat: no-repeat;
+    animation: progress-qh65fe 2.4s infinite;
+ }
+ 
+ @keyframes progress-qh65fe {
+    0% {
+       background-position: 0% 100%, 20%   0%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+    }
+ 
+    16.67% {
+       background-position: 0%   0%, 20%   0%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+    }
+ 
+    33.33% {
+       background-position: 0%   0%, 20% 100%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+    }
+ 
+    50% {
+       background-position: 0%   0%, 20% 100%, 40%   0%, 60%   0%, 80% 100%, 100%   0%;
+    }
+ 
+    66.67% {
+       background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80% 100%, 100%   0%;
+    }
+ 
+    83.33% {
+       background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80%   0%, 100%   0%;
+    }
+ 
+    100% {
+       background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80%   0%, 100% 100%;
+    }
+ }
+ .todo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh; /* Asegúrate de que ocupe toda la altura del Backdrop */
+  width: 100vw;
+}
+
+.in {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  object-fit: cover;
+  position: absolute;
+  top: 80;
+  left: 0;
+  z-index: 1; /* Para que la imagen esté detrás del progreso */
+}
+
+.progress {
+  margin-top: 500px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 13px;
+  z-index: 2; /* Asegura que el progreso esté por encima de la imagen */
+  position: relative; /* Esto es necesario para las animaciones internas */
+}

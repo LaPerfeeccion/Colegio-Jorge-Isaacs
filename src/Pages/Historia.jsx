@@ -1,11 +1,20 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Appbar from '../Components/Appbar';
 import './Historia.css';
-import { Grid, Stack, Typography } from '@mui/material';
+import { Backdrop, Grid, Stack, Typography } from '@mui/material';
 import Footer from '../Components/Footer';
 import Spot from '../Components/spot';
 
 const Historia = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   const [isPlaying, setIsPlaying] = useState(true); // Estado para controlar la reproducción
   const audioRef = useRef(null); // Referencia al elemento de audio
 
@@ -20,10 +29,36 @@ const Historia = () => {
       setIsPlaying(false);
     }
   };
+  useEffect(() => {
+    const showBackdrop = async () => {
+      handleOpen();
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 6000)); // Espera de 6 segundos
+      } finally {
+        handleClose(); // Cierra el Backdrop
+      }
+    };
+    
+    showBackdrop();
+  }, []);  // Esto asegura que se ejecute una sola vez cuando el componente se monta.
+  
 
   return (
     <Stack>
       <Appbar />
+      <Backdrop
+        sx={{
+          color: '#fff',
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundImage: './public/Imagenes/Imagendelcolegio.png'
+        }}
+        open={open}
+      >
+        <div className="todo">
+          <img className="in" src="./public/Imagenes/it.png" width={'100%'} alt="" />
+          <div className="progress"></div>
+        </div>
+      </Backdrop>
       <img className="portada" src="/public/imagenes/Educando.png" alt="Portada" />
       <Stack sx={{ gap: '100px' }}>
         <Stack className="him" flexDirection={'column'} sx={{ justifyContent: 'space-around' }}>
@@ -31,8 +66,8 @@ const Historia = () => {
             Himno del Colegio Jorge Isaacs
           </Typography>
           <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-            <img className="rotate linear infinite" src="/public/imagenes/fondo.png" width="300px" alt="" />
-            <button
+            {/* <img className="rotate linear infinite" src="/public/imagenes/fondo.png" width="300px" alt="" /> */}
+            {/* <button
               id="lo"
               onClick={togglePlayPause}
               style={{
@@ -44,7 +79,8 @@ const Historia = () => {
                 {isPlaying ? 'Pause Music' : 'Play Music'}
               </Typography>
             </button>
-            <audio ref={audioRef} src="/public/Audios/Himno.mp3" loop autoPlay />
+            <audio ref={audioRef} src="/public/Audios/Himno.mp3" loop autoPlay /> */}
+            <Spot></Spot>
           </Grid>
         </Stack>
           <Stack className='videos'>
