@@ -144,6 +144,12 @@ const Principal = () => {
           </section>
         </Grid>
         {/* <Segundo /> */}
+        <div>
+            <Typography className="wo" variant="h1" sx={{ textAlign: 'center', fontFamily: 'Dancing Script', color:'white' }}>
+          Redes
+          </Typography>
+        </div>
+        
         <div className="Scroll">
           <Cover />
         </div>

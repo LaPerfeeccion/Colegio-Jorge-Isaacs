@@ -30,8 +30,8 @@ export default function Cover() {
 
         <Card className="col-span-12 sm:col-span-4 h-[300px] card-overlay">
           <CardHeader className="absolute z-10 top-1 flex-col card-content !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
-            <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+            <p className="text-tiny text-white/60 uppercase font-bold">Imnaguración de los juegos</p>
+            <h4 className="text-white font-medium text-large">Intercursos</h4>
           </CardHeader>
           <Image
             removeWrapper
@@ -48,8 +48,8 @@ export default function Cover() {
 
         <Card className="col-span-12 sm:col-span-4 h-[300px] card-overlay">
           <CardHeader className="absolute z-10 top-1 flex-col card-content !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">Supercharged</p>
-            <h4 className="text-white font-medium text-large">Creates beauty like a beast</h4>
+            <p className="text-tiny text-white/60 uppercase font-bold">Valores</p>
+            <h4 className="text-white font-medium text-large">Tren de los valores</h4>
           </CardHeader>
           <Image
             removeWrapper

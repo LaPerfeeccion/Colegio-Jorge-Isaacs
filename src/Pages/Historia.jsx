@@ -83,6 +83,9 @@ const Historia = () => {
             <Spot></Spot>
           </Grid>
         </Stack>
+              <Typography sx={{ textAlign: 'center', fontFamily: 'Dancing Script' , color:"white" }} variant="h3" >
+                Videos
+              </Typography>
           <Stack className='videos'>
             <iframe
               width="1200"

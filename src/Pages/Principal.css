@@ -241,3 +241,34 @@ background: linear-gradient(0deg, #01012c 0%, #000000 100%);
   z-index: 2; /* Asegura que el progreso esté por encima de la imagen */
   position: relative; /* Esto es necesario para las animaciones internas */
 }
+
+
+
+
+
+@keyframes scale-up{
+  to{scale: 1,5;}
+}
+
+@keyframes fade-away{
+  to{opacity: 0;}
+}
+
+.principal-container{
+  view-timeline: --scroll;
+}
+
+.wo div:first-child {
+  animation: fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: exit 20% exit 90%;
+}
+
+.wo div:last-child {
+  animation: 
+  scale-up both ease-in-out,
+  fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: exit 0% exit 100%,
+  exit 50% exit 90%;
+}

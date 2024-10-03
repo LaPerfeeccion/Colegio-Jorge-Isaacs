@@ -18,7 +18,7 @@ export default function Modal1({ isOpen, onClose }) {
           {/* Aplicamos el fondo aquí */}
           {/* Header del modal */}
           <ModalHeader>
-            <Typography variant="h1" sx={{ fontFamily: 'Dancing Script', textAlign: 'center', color: 'black' }}>
+            <Typography textAlign={'center'} variant="h1" sx={{ fontFamily: 'Dancing Script', color: 'black' }}>
               Consejos y seguridad
             </Typography>
           </ModalHeader>
