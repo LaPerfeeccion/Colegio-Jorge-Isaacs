@@ -60,6 +60,8 @@ const Principal = () => {
     navigate('/gallery');
   };
 
+
+
   return (
     <Stack className="principal-container">
       <Appbar />
@@ -88,7 +90,7 @@ const Principal = () => {
             <button className="btn" onClick={() => gallery()}>
               {' '}
               <Typography variant="h4" sx={{ fontFamily: 'Dancing Script' }}>
-                Galeria
+                Galería
               </Typography>{' '}
             </button>
           </Typography>

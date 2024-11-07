@@ -4,9 +4,11 @@ import './Historia.css';
 import { Backdrop, Grid, Stack, Typography } from '@mui/material';
 import Footer from '../Components/Footer';
 import Spot from '../Components/spot';
+import { useNavigate } from 'react-router-dom';
 
 const Historia = () => {
-  const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(true); 
   const handleClose = () => {
     setOpen(false);
   };
@@ -29,19 +31,23 @@ const Historia = () => {
       setIsPlaying(false);
     }
   };
+  // Mostrar el Backdrop inmediatamente y ocultarlo después de 3 segundos
   useEffect(() => {
     const showBackdrop = async () => {
-      handleOpen();
       try {
-        await new Promise((resolve) => setTimeout(resolve, 6000)); // Espera de 6 segundos
+        await new Promise((resolve) => setTimeout(resolve, 4000)); // Espera de 3 segundos
       } finally {
-        handleClose(); // Cierra el Backdrop
+        setOpen(false); // Cierra el Backdrop
       }
     };
-    
+
     showBackdrop();
-  }, []);  // Esto asegura que se ejecute una sola vez cuando el componente se monta.
+  }, []);
+ // Esto asegura que se ejecute una sola vez cuando el componente se monta.
   
+  const Deportes = () => {
+    navigate('/Deportistas');
+  };
 
   return (
     <Stack>
@@ -96,7 +102,26 @@ const Historia = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
+
+
           </Stack>
+          <Stack alignItems={'center'} sx={{gap:"10px"}}>
+          <Typography sx={{ textAlign: 'center', fontFamily: 'Dancing Script' , color:"white" }} variant="h3" >
+                Tour
+              </Typography>
+            <iframe
+              width="900"
+              height="515"
+              src="https://www.youtube.com/embed//O-NWtAjWZXg"
+              title="Colegio Jorge Isaacs"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </Stack>
+          <button className="bts" onClick={() => Deportes()}>
+               <Typography variant="h4" sx={{ fontFamily: 'Dancing Script' }}> Deportes</Typography>
+            </button>
       </Stack>
       <Footer></Footer>
     </Stack>

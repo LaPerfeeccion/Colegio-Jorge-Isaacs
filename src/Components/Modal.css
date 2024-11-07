@@ -26,3 +26,13 @@
     box-shadow: inset .2rem .2rem 1rem #fff
       , inset -.2rem -.2rem 1rem #ccc;
 }
+
+li{
+  color: white ;
+}
+
+.tof{
+  background: #c70039;
+background: -webkit-linear-gradient(257deg, #c70039 0%, #900c3f 100%);
+background: linear-gradient(257deg, #c70039 0%, #900c3f 100%);
+}

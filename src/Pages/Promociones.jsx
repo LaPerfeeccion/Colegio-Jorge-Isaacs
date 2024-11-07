@@ -78,46 +78,14 @@ const Promociones = () => {
               </div>
             </div>
           </div>
-          <div className="item">
+          <div className="item2">
             <img className='lo' src="./public/imagenes/Prom2021.jpeg" alt="GEMDEX 2021" />
             <div className="content">
-              <div className="title">GEMDEX</div>
-              <div className="name">Prom 2021</div>
+              <div className="title">Prom 2021</div>
+              <div className="name2"> </div>
             </div>
           </div>
         </div>
-
-        {/* Elimina o comenta esta sección */}
-        {/* <div className="thumbnail">
-          <div className="item">
-            <img src="public/imagenes/etuals.png" alt="Thumbnail Etuals" />
-            <div className="content">
-              <div className="title">PROMOCIONES</div>
-              <div className="des">Description</div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="./public/imagenes/Aurum.png" alt="Thumbnail Aurum" />
-            <div className="content">
-              <div className="title">PROMOCIONES</div>
-              <div className="des">Description</div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="./public/imagenes/Prom2022.jpeg" alt="Thumbnail GEMDEX 2022" />
-            <div className="content">
-              <div className="title">PROMOCIONES</div>
-              <div className="des">Description</div>
-            </div>
-          </div>
-          <div className="item">
-            <img src="./public/imagenes/Prom2021.jpeg" alt="Thumbnail GEMDEX 2021" />
-            <div className="content">
-              <div className="title">PROMOCIONES</div>
-              <div className="des">Description</div>
-            </div>
-          </div>
-        </div> */}
 
         <div className="arrows">
           <button id='prev'>{'<'}</button>

@@ -1,47 +1,257 @@
 .all2 {
-  columns: 300px;
-  padding: 80px;
-}
-
-.deportista-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 50px;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  transition: all 0.3s ease;
-  overflow: hidden; /* Agregamos esto para cortar cualquier contenido que sobresalga */
-}
-
-.deportista-card:hover {
-  background-color: black;
-  color: aliceblue;
-  transform: translateY(-5px) scale(1.2);
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-  outline: 10px black;
-  width: 350px;
 }
 
 .deportista-image {
-  width: 40%;
+ 
+  object-fit: cover;
+  transition: box-shadow 0.3s ease; /* Solo transición de box-shadow */
+  z-index: 2;
+}
+
+.ui {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}.cort {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Asegúrate de que no haya margen extra */
+}
+
+.ui {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Ajusta el gap */
+}
+
+.Carta .deportista-image {
+  width: 170px;
+  height: 300px;
+  object-fit: cover;
+  background-color: aliceblue;
+}
+
+.stacked {
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  padding: 20px;
+}
+
+.stacked > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.stacked > .media {
+  z-index: -1;
+}
+
+.to {
+  width: 1000px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.ti {
+  z-index: 2;
+  font-size: 5em;
+}
+
+.deportista-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+  margin-bottom: 20px; /* Espacio entre las filas de deportistas */
+}
+
+.deportista-slider {
+  margin-right: 15px; /* Espacio entre la imagen y el nombre */
+}
+
+.deportista-info {
+  font-family: Arial, sans-serif;
+
+}
+
+.deportista-card {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Asegúrate de que sea mayor que otros elementos */
+  overflow: hidden;
+}
+
+.deportista-card:hover {
+  box-shadow: none; /* O puedes cambiarlo a otro valor */
+  transform: scale(1.05); /* Un poco de escalado para dar un efecto de interacción */
+}
+
+.deportista-image {
+  width: 100%;
   height: auto;
+  border-radius: 30px; /* Para darle bordes redondeados */
+ 
+}
+
+.overlays .deportista-name {
+  box-shadow: inset blue 0px -130px 90px -90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
-  margin-bottom: 20px;
+  height: 300px;
+  z-index: 0; /* Asegúrate de que sea menor */
+  border-radius: 30px;
+  color: transparent;
 }
 
-/* Estilos para el contenido de la tarjeta */
-.deportista-card .CardContent {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  max-height: 0; /* Aseguramos que el contenido oculto no ocupe espacio */
-  overflow: hidden; /* Cortamos cualquier contenido que sobresalga */
-}
-
-.deportista-card:hover .CardContent {
+.deportista-card:hover .overlays .deportista-name {
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0.5 ,0.5 ,0.5, 0.5);
   opacity: 1;
-  visibility: visible;
-  max-height: none; /* Permitimos que el contenido se expanda cuando es visible */
+  transition: background-color 0.4s ease-in, box-shadow 0.8s ease-in;
+  border-radius: 10px;
+  height: 300px;
+  z-index: 0; /* Asegúrate de que sea menor *//* Mostrar el overlay cuando se pase el puntero */
+  border-radius: 30px;
+  color: #fff;
 }
+
+.deportista-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.cort{
+  display: flex;
+  flex-direction: column;
+}
+
+.othe{
+  color: #fff;
+  font-size: 2em;
+}
+
+
+
+.po{
+  font-size: 1em;
+  padding: 10px;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 10px;
+  height: 40px;
+}
+.car{
+  width: 200px;
+}
+
+.tags{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.depo{
+  color: #fff;
+  font-size: 2em;
+}
+.video-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  filter: drop-shadow(1px 1px 28px rgb(223, 217, 217));
+}
+
+.video-slide {
+  transition: transform 0.5s ease;
+  flex-shrink: 0;
+}
+
+.yop{
+  padding: 10px;
+  height: 85vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+#image-track > .imagel{
+  width: 32vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+  background-color: #f0f0f0; /* Color de fondo de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar (parte que se arrastra) */
+  border-radius: 6px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del pulgar al pasar el ratón */
+}
+
+/* Estilo para las barras de desplazamiento en Firefox */
+* {
+  scrollbar-width: thin; /* Hacer la barra de desplazamiento delgada */
+  scrollbar-color: #ffffff #000000; /* Color del pulgar y color de fondo */
+}
+
+/* Si deseas un borde en la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color de fondo del riel */
+  border-radius: 30px; /* Bordes redondeados para el riel */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Bordes redondeados para el pulgar */
+  border: 3px solid transparent; /* Borde alrededor del pulgar */
+  background-clip: padding-box; /* Asegura que el borde no se superponga */
+}
+
+body{
+  overflow-x: hidden;
+}
+#image-track {
+  display: flex;
+  align-items: center;
+  gap: 4vmin;
+  position: absolute;
+  bottom: 0; /* Coloca el track en la parte inferior */
+  left: 50%;
+  top: 170%;
+  transform: translateX(-50%); /* Centra horizontalmente el track */
+}
+

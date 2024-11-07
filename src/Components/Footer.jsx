@@ -58,10 +58,10 @@ const Footer = () => {
         <hr />
         <div className="cont">
           <Typography sx={{ fontFamily: 'Dancing Script' }} variant="h6">
-            Contactenos
+            Contáctenos
           </Typography>
           <span> colegiojorgeisaacs4073@gmail.com</span>
-          <span> 300 4574585 </span>
+          <span> 3373474 </span>
         </div>
       </footer>
     </>

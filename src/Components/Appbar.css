@@ -1,0 +1,13 @@
+/* Enlace por defecto */
+a {
+  color: black;  /* Color inicial de los enlaces */
+  text-decoration: none;  /* Sin subrayado */
+}
+
+/* Enlace activo */
+a.active {
+  color: #0A002C;  /* Azul oscuro */
+  font-weight: bold;  /* Negrita para destacar */
+}
+
+/* Puedes agregar más estilos si es necesario */

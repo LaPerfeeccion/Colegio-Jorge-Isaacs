@@ -12,20 +12,13 @@ export default function Modal1({ isOpen, onClose }) {
       className="modal-container" // Puedes agregar una clase para manejar el estilo del modal
     >
       <ModalContent>
-        {/* Stack principal del modal */}
-        <Stack sx={{ backgroundColor: 'White', padding: '20px' }}>
-          {' '}
-          {/* Aplicamos el fondo aquí */}
-          {/* Header del modal */}
-          <ModalHeader>
-            <Typography textAlign={'center'} variant="h1" sx={{ fontFamily: 'Dancing Script', color: 'black' }}>
+        <Stack sx={{ backgroundColor: 'Black', padding: '10px' }}>
+            <Typography textAlign={'center'} variant="h1" sx={{ fontFamily: 'Dancing Script', color: 'red' }}>
               Consejos y seguridad
             </Typography>
-          </ModalHeader>
-          {/* Cuerpo del modal */}
           <ModalBody>
             <Stack sx={{ flexDirection: 'row', gap: '20px' }}>
-              <Typography variant="h5" sx={{ fontFamily: 'Dancing Script', color: 'black' }}>
+              <Typography variant="h5" sx={{ fontFamily: 'Dancing Script', color: 'white' }}>
                 El Colegio Jorge Isaacs propone formar jóvenes con una conciencia clara y recta como el resultado de la
                 práctica de valores de tipo vital, intelectual, ético, estético, social, político y utilitario como
                 fundamento de la vida del individuo, que también les permitan capacidad de juicio para apreciar los
@@ -35,15 +28,15 @@ export default function Modal1({ isOpen, onClose }) {
 
             {/* Consejos y Seguridad */}
             <Stack justifyContent={'space-around'} sx={{ maxWidth: '100%', flexDirection: 'row', gap: '20px' }}>
-              <Stack sx={{ gap: '10px', color: 'black', padding: '10px', borderRadius: '10px', backgroundColor:"#caf6f4" }}>
-                <Typography textAlign={'center'} variant="h5" sx={{ fontFamily: 'Dancing Script'}}>
+              <Stack sx={{ gap: '10px', color: 'black', padding: '10px', borderRadius: '10px', backgroundColor:"red" }}>
+                <Typography textAlign={'center'} variant="h5" sx={{ fontFamily: 'Dancing Script', color:"white"}}>
                   Consejos
                 </Typography>
-                  <li>
+                  <li style={{color:"white"}}>
                     Es fundamental tener un horario de estudio bien definido. Establecer horas específicas para estudiar
                     y descansar crea un hábito y reduce la procrastinación.
                   </li>
-                  <li>
+                  <li style={{color:"white"}}>
                     Técnicas de Estudio: Promover métodos como el método Pomodoro o la técnica Feynman ayuda a una
                     comprensión más profunda.
                   </li>
